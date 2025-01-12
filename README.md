@@ -68,13 +68,13 @@ python3 -m pip install requests
 
             To run the program, simply execute the following command in your terminal:
             bash
-            python health_check.py <path_to_config_file>
+            python synthetic_monitor.py <path_to_config_file>
 
             Where <path_to_config_file> is the path to your YAML configuration file.
 
 ----Example for How to run the program---
         bash
-        python health_check.py config.yaml
+        python filename.py config.yaml
 
 -----------Conclusion------------------
 
