@@ -80,6 +80,9 @@ pip3 install matplotlib
             bash
             python3 filename.py config.yaml
 
+---- How to exit---
+      User presses CTRL+C and the program exits
+
 -----------Conclusion------------------
 
             This Health Check Program helps you monitor the health of HTTP endpoints by periodically making HTTP requests and tracking their availability. With customizable configuration through YAML files, you can easily monitor a large number of services and track their uptime.
