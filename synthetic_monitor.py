@@ -7,12 +7,7 @@ from collections import defaultdict
 
 # Function to load the configuration file
 def load_config(file_path):
-    """
-    Load the YAML configuration file and return the list of endpoints.
-
-    :param file_path: Path to the YAML file
-    :return: List of endpoints
-    """
+  
     try:
         with open(file_path, 'r') as file:
             return yaml.safe_load(file)
@@ -22,12 +17,7 @@ def load_config(file_path):
 
 # Function to perform health check on a single endpoint
 def check_health(endpoint):
-    """
-    Perform health check for a given endpoint and return the status.
-
-    :param endpoint: Dictionary containing endpoint details
-    :return: Tuple (domain, latency, status) where status is "UP" or "DOWN"
-    """
+ 
     url = endpoint.get("url")
     method = endpoint.get("method", "GET").upper()  # Default to GET if not specified
     headers = endpoint.get("headers", {})
@@ -57,11 +47,7 @@ def check_health(endpoint):
 
 # Function to log individual test results
 def log_test_results(results):
-    """
-    Log individual endpoint test results including latency and status.
-
-    :param results: List of tuples (domain, latency, status)
-    """
+  
     print("Health Check Results for Current Cycle:")
     for domain, latency, status in results:
         if status == "UP":
@@ -71,12 +57,7 @@ def log_test_results(results):
 
 # Function to log cumulative availability percentages
 def log_availability(domain_stats, domain_counts):
-    """
-    Log the availability percentage for each domain.
-
-    :param domain_stats: Dictionary with successful checks per domain
-    :param domain_counts: Dictionary with total checks per domain
-    """
+ 
     print("\nCumulative Availability Results:")
     for domain in domain_counts:
         availability = (100 * domain_stats[domain] / domain_counts[domain])
@@ -85,11 +66,7 @@ def log_availability(domain_stats, domain_counts):
 
 # Main function
 def main(file_path):
-    """
-    Main function to run the health check program.
-
-    :param file_path: Path to the YAML configuration file
-    """
+ 
     # Load the configuration file
     endpoints = load_config(file_path)
 
