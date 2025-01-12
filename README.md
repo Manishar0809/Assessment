@@ -62,6 +62,10 @@ python3 -m venv path/to/venv
 source path/to/venv/bin/activate
 python3 -m pip install pyyaml
 python3 -m pip install requests
+pip3 install matplotlib  
+pip3 install openpyxl
+pip3 install matplotlib
+
 
 
 -------How to Run the Program in Command Prompt -----
